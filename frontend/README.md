@@ -1,9 +1,3 @@
-Com certeza\! Aqui estão duas versões do `README` usando a formatação Markdown, mantendo os estilos diferentes:
-
------
-
-### Opção 1: Estilo Conciso e Profissional
-
 **\#\# Projeto: Visualizador de Dados da Fórmula 1**
 
 Este é um projeto acadêmico desenvolvido para a disciplina de FullStack, focado em consumir e exibir dados da **API pública da Fórmula 1**. A aplicação é construída com **React**, utilizando **React Router DOM** para navegação e **useReducer** para gerenciar o estado global da API.
