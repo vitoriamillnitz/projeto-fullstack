@@ -1,15 +1,15 @@
-**\#\# Projeto: Visualizador de Dados da Fórmula 1**
+**Projeto: Visualizador de Dados da Fórmula 1**
 
 Este é um projeto acadêmico desenvolvido para a disciplina de FullStack, focado em consumir e exibir dados da **API pública da Fórmula 1**. A aplicação é construída com **React**, utilizando **React Router DOM** para navegação e **useReducer** para gerenciar o estado global da API.
 
 -----
 
-**\#\#\# 🔗 Acesse o Projeto Online**
+**🔗 Acesse o Projeto Online**
 [Projeto Fórmula 1](https://www.google.com/search?q=https://Projeto-F%C3%B3rmula-1.netlify.app/)
 
 -----
 
-**\#\#\# 🚀 Tecnologias**
+**🚀 Tecnologias**
 
   * **React.js**: Biblioteca principal para a interface.
   * **React Router DOM**: Gerenciamento de navegação SPA.
@@ -19,7 +19,7 @@ Este é um projeto acadêmico desenvolvido para a disciplina de FullStack, focad
 
 -----
 
-**\#\#\# ⚙️ Funcionalidades**
+**⚙️ Funcionalidades**
 
   * Lista de pilotos e suas classificações por temporada.
   * Classificação de equipes (construtores) por ano.
@@ -29,7 +29,7 @@ Este é um projeto acadêmico desenvolvido para a disciplina de FullStack, focad
 
 -----
 
-**\#\#\# 💡 Por que useReducer?**
+**💡 Por que useReducer?**
 
   * **Controle**: Facilita a gestão de estados complexos.
   * **Organização**: Centraliza a lógica de atualização, tornando o código mais fácil de manter.
@@ -39,7 +39,7 @@ Este é um projeto acadêmico desenvolvido para a disciplina de FullStack, focad
 
 ### Opção 2: Estilo Mais Detalhado e Amigável
 
-**\#\# Projeto de Visualização de Dados da Fórmula 1**
+**Projeto de Visualização de Dados da Fórmula 1**
 
 Bem-vindo ao meu projeto da disciplina de FullStack\! Este é um visualizador de dados que conecta você diretamente com o universo da Fórmula 1, consumindo a **API pública** `https://api.jolpi.ca//ergast/f1/` para trazer as informações mais relevantes.
 
@@ -47,12 +47,12 @@ A aplicação foi feita com **React** e **JavaScript**, e eu usei o **React Rout
 
 -----
 
-**\#\#\# 🔗 Explore o Projeto ao Vivo**
+**🔗 Explore o Projeto ao Vivo**
 [Projeto Fórmula 1](https://www.google.com/search?q=https://Projeto-F%C3%B3rmula-1.netlify.app/)
 
 -----
 
-**\#\#\# 🔧 Tecnologias Usadas**
+**🔧 Tecnologias Usadas**
 
   * **React.js**: A base de tudo\!
   * **React Router DOM**: Para a navegação entre as diferentes seções.
@@ -62,7 +62,7 @@ A aplicação foi feita com **React** e **JavaScript**, e eu usei o **React Rout
 
 -----
 
-**\#\#\# 🏎️ O que Você Pode Fazer?**
+**🏎️ O que Você Pode Fazer?**
 Ao acessar o site, você pode usar o menu para:
 
   * Ver a **classificação dos pilotos** e suas posições a cada temporada.
@@ -73,7 +73,7 @@ Enquanto os dados são carregados, um **componente de "Loading"** é exibido, ga
 
 -----
 
-**\#\#\# ✨ Vantagens de Usar useReducer**
+**✨ Vantagens de Usar useReducer**
 Escolhi o **useReducer** por três motivos principais:
 
 1.  **Controle Aprimorado**: Facilita a gestão de dados complexos que vêm da API.
