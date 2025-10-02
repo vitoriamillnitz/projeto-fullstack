@@ -6,11 +6,6 @@ A aplicação foi feita com **React** e **JavaScript**, e eu usei o **React Rout
 
 -----
 
-**🔗 Explore o Projeto ao Vivo**
-[Projeto Fórmula 1](https://www.google.com/search?q=https://Projeto-F%C3%B3rmula-1.netlify.app/)
-
------
-
 **🔧 Tecnologias Usadas**
 
   * **React.js**: A base de tudo\!
