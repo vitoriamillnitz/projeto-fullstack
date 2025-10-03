@@ -2,7 +2,7 @@
 
 Bem-vindo ao meu projeto da disciplina de FullStack\! Este é um visualizador de dados que conecta você diretamente com o universo da Fórmula 1, consumindo a **API pública** `https://api.jolpi.ca//ergast/f1/` para trazer as informações mais relevantes.
 
-A aplicação foi feita com **React** e **JavaScript**, e eu usei o **React Router DOM** para criar uma experiência de navegação fluida, sem recarregar a página. Em vez de usar vários `useState`, optei pelo **useReducer** para ter um controle mais robusto e organizado do estado da aplicação, especialmente ao lidar com os dados da API.
+A aplicação foi feita com **React** e **JavaScript**, e eu usei o **React Router DOM** para criar uma experiência de navegação fluida, sem recarregar a página. Em vez de usar vários `useState`, optei pelo **useReducer** para ter um controle mais robusto e organizado do estado da aplicação, especialmente ao lidar com os dados da API. Acesso online: https://vitoriamillnitz.github.io/projeto-fullstack/
 
 -----
 
