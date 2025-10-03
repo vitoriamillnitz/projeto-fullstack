@@ -23,7 +23,7 @@ import FormCreateRace from "./components/formCreateRace/FormCreateRace";
 
 function App() {
   return (
-    <BrowserRouter basename="/Projeto-Formula-1">
+    <BrowserRouter basename="/projeto-fullstack">
     <div className="screen">
       <SeasonProvider>
         <LoginProvider >
