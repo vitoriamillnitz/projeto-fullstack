@@ -1,0 +1,70 @@
+.loginDiv{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+    gap: 15px;
+}
+
+.loginForm {
+    display: flex; 
+    align-items: center; 
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 600px; 
+    margin-inline: auto;
+    background-color: #131313;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(225, 6, 0, 0.1);
+}
+
+.loginForm input {
+    padding: 0.75rem 1rem;
+    font-size: 1.3rem;
+    height: 60px; 
+    flex-grow: 1; 
+    background-color: #1a1a1a;
+    color: #F0F0F0;
+    border: 1px solid #444444; 
+    border-radius: 2px;
+    outline: none;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box; 
+    vertical-align: middle; 
+}
+
+.loginForm input:focus {
+    border-color: #00FFFF;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+}
+
+.loginForm button {
+    padding: 0.75rem 1rem;
+    font-size: 1.5rem;
+    height: 60px; 
+    background-color: #e10600;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    vertical-align: middle; 
+}
+
+.loginForm button:hover {
+    background-color: #ff2e2e;
+    box-shadow: 0 0 15px rgba(225, 6, 0, 0.9);
+    color: #00FFFF;
+}
+
+.erroLogin {
+    color: red;
+    margin-top: 1rem;
+    text-align: center;
+}

@@ -1,0 +1,54 @@
+.driverDiv, .cardRace {
+    color: #F0F0F0;
+    background-color: #0f0f0f;
+    border: .1px #444444 solid;
+    border-radius: 4px; 
+    transition: border-color 0.3s ease;
+}
+
+.cardRace:hover {
+    border-color: #e10600;
+}
+
+.driverCard:hover .driverDiv {
+    border-color: #e10600;
+}
+
+.cardRace h2 {
+    font-size: 20px;
+    min-height: 45px;
+}
+
+.cardRace p {
+    color: #cccccc;
+    font-size: 14px;
+}
+
+.cardRace a {
+    color: #cccccc;
+}
+
+.cardRace a:hover {
+    color: #e10600;
+}
+
+.driverDiv {
+    align-items: flex-start;
+    min-width: 250px;
+}
+
+.number {
+    font-size: 150px;
+    font-weight: 700;
+}
+
+.nomeDriver h2 {
+    font-size: 28px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+.infoDriver p {
+    color: #cccccc;
+}

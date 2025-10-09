@@ -1,0 +1,37 @@
+.divForm input, .loginForm input {
+    padding: 0.75rem 1rem;
+    font-size: 1.3rem;
+    background-color: #131313; 
+    color: #F0F0F0;
+    border: 1px solid #444444; 
+    border-radius: 2px; 
+    outline: none;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.divForm input:focus, .loginForm input:focus {
+    border-color: #00FFFF; 
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.5); 
+}
+
+.divForm button, .loginForm button {
+    background-color: #e10600;
+    font-family: 'Bebas Neue', sans-serif; 
+    letter-spacing: 1px;
+    border-radius: 2px; 
+    transition: background 0.3s ease, box-shadow 0.2s ease;
+}
+
+.divForm button:hover, .loginForm button:hover {
+    background-color: #ff2e2e;
+    box-shadow: 0 0 15px rgba(225, 6, 0, 0.7); 
+}
+
+.loginForm input, .loginForm button {
+    vertical-align: middle; 
+    box-sizing: border-box; 
+}
+
+.loginForm input, .loginForm button {
+    height: 60px; 
+}
