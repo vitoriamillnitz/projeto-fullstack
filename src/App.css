@@ -1,11 +1,60 @@
-.info{
-  margin-left: 20vw;
+/* ... seu CSS existente para .app-container, .app-header, .app-sidebar, .app-content ... */
+
+.app-header {
+  /* ... (suas regras existentes para o header) ... */
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  justify-content: space-between; /* Para empurrar logo para esquerda e items para direita */
+  padding: 0 2rem; /* Espaçamento lateral */
 }
 
-.createForms{
+.header-right-items {
   display: flex;
+  align-items: center;
+  gap: 2rem; /* Espaçamento entre FindYear e Login/Logout */
+}
+
+/* Estilos para o Logo no Header (reaproveitando classes existentes) */
+.app-header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-header .logo img {
+    height: 25px; /* Altura da imagem no header */
+    width: auto;
+}
+
+.app-header .logo p {
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: #e10600;
+    font-size: 1.0em;
+    margin: 0; /* Remove margem padrão de parágrafo */
+}
+
+/* Ajustes para FindYear (reaproveitando classes existentes) */
+.app-header .findYearDiv {
+    display: flex;
+    flex-direction: row; /* Coloca texto e input na mesma linha */
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 0; /* Remove padding inferior se houver */
+}
+
+.app-header .findYearDiv p {
+    margin-bottom: 0;
+    font-size: 0.9em; /* Texto menor no header */
+}
+
+/* Ajustes para o Link de Login/Logout (reaproveitando classes existentes) */
+.app-header .menuLink a {
+    text-decoration: none;
+    color: #cccccc;
+    transition: color 0.2s ease;
+}
+
+.app-header .menuLink a:hover {
+    color: #e10600;
 }

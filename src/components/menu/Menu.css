@@ -1,25 +1,10 @@
-.menuDiv{
+.menuDiv {
     padding-top: 30px;
-    flex: 1;
-    background-color: #0f0f0f;
-    border-right: .1px #858585 solid;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    min-width: 200px;
-    max-width: 250px;
+    height: 100%;
     align-items: center;
     justify-content: flex-start;
-    gap: 50px;
-    position: fixed;
-    top: 0;     
-    left: 0;
-    z-index: 100;
-}
-
-p{
-    color: white;
-    margin: 0;
 }
 
 .logo{
@@ -65,6 +50,7 @@ p{
     transition: color 0.2s ease, background-color 0.2s ease, border-left 0.2s ease;
     text-transform: uppercase;
     font-size: 1.15em;
+    border-left: 3px solid transparent;
 }
 
 .menuLink a:hover {
@@ -75,27 +61,7 @@ p{
 
 .menuLink a.active {
     color: white;
-    background-color: #e10600;
+    background-color: #1a1a1a;
     font-weight: 600;
-    border-left: 5px solid white;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-}
-
-.endItens{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.findYearDiv input:focus{
-    outline: none;
-    box-shadow: 0 0 0 1px #00FFFF; 
-    border-color: #00FFFF;
-}
-
-.active{
-    background-color: #e10600;
-    box-shadow: 0 0 8px rgba(225, 6, 0, 0.7); 
+    border-left: 3px solid #e10600;
 }

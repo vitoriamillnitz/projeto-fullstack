@@ -8,7 +8,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
   overflow-y: auto;
-  padding-left: 20vw;
 }
 
 code {
