@@ -1,0 +1,28 @@
+tbody td {
+    color: #cccccc;
+    padding: 10px 5px;
+    border-right: 1px solid #1a1a1a; 
+
+}
+
+tbody td:last-child {
+    border-right: none;
+}
+
+tbody tr td:first-child {
+    background-color: #1a1a1a; 
+    color: #00FFFF; 
+    font-weight: 700;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3em;
+    border-right: 1px solid #e10600; 
+}
+
+thead th{
+    background-color: #1f1f1f;
+    border-bottom: 2px solid #00FFFF; 
+    border-right: 1px solid #444444;
+    font-weight: 700;
+    padding: 12px 5px;
+    color: white;
+}
