@@ -9,9 +9,10 @@ const initialState = {
     selectDriver: "",
     driverData: null,
     driversData: null,
+    isLoading: true, // Adicionado para feedback de carregamento
 }
 
-const reducer =(state, action) =>{
+const reducer = (state, action) => {
     switch(action.type){
         case "set_select_driver":
             return {...state, selectDriver: action.payload};
@@ -19,83 +20,75 @@ const reducer =(state, action) =>{
             return {...state, driverData: action.payload};
         case "set_drivers_data":
             return {...state, driversData: action.payload};
+        case "set_loading":
+            return {...state, isLoading: action.payload};
         default:
             throw Error('Not found action: ' + action.type);
     };
 };
 
 const DriverProvider = ({children}) =>{
-    const [driver, table] = React.Children.toArray(children);
+    const [driverComponent, tableComponent] = React.Children.toArray(children);
 
     const { yearSeason } = useContext(SeasonContext);
 
     const [state, dispatch] = useReducer(reducer, initialState)
-    const { selectDriver, driverData, driversData } = state;
+    const { selectDriver, driverData, driversData, isLoading } = state;
 
     useEffect(()=>{
-        const fetchDriver = async () => {
-            try{
-                if(!yearSeason){
-                    toast.warn("Por favor, informe um ano.")
-                    throw new Error("Year not found");
-                }else{
-                    const response = await fetch(`https://localhost:3001/pilotos/${selectDriver}`);
-                    if (!response.ok) {
-                        throw new Error(`Erro API F1: ${response.status} ${response.statusText}`);
-                    }
-                    const data = await response.json();
-                    if((data).length === 0){
-                        dispatch({
-                            type: 'set_driver_data',
-                            payload: ""
-                        })
-                    }else{
-                        dispatch({
-                            type: 'set_driver_data',
-                            payload: data
-                        })
-                    }
-                }
-            }catch (error){
-                toast.error("Error ao procurar dados")
-                console.error('Error to find data of the driver', error);
-            }
-        };
-        if(selectDriver !== "") fetchDriver();
-    }, [selectDriver, yearSeason])
-
-    useEffect(()=>{
-
         const fetchAllDrivers = async () => {
+            if(!yearSeason) return;
+
+            dispatch({ type: 'set_loading', payload: true });
             try{
-                if(!yearSeason){
-                    toast.warn("Por favor, informe um ano.")
-                    throw new Error("Year not found");
-                } else{
-                    const response = await fetch(`https://localhost:3001/pilotos?temporada=${yearSeason}`);
-                    const data = await response.json();
-                    if (!response.ok) {
-                        throw new Error(`Erro API F1: ${response.status} ${response.statusText}`);
-                    }
-                    dispatch({
-                        type: 'set_drivers_data',
-                        payload: data
-                    })
+                const response = await fetch(`https://ergast.com/api/f1/${yearSeason}/drivers.json`);
+                if (!response.ok) {
+                    throw new Error(`Erro API F1: ${response.status}`);
                 }
-            }catch (error){
-                toast.error("Error ao procurar dados")
+                const data = await response.json();
+                dispatch({
+                    type: 'set_drivers_data',
+                    payload: data.MRData.DriverTable.Drivers
+                })
+            } catch (error){
+                toast.error("Erro ao buscar dados dos pilotos.");
                 console.error('Error to find data of the drivers:', error);
+            } finally {
+                dispatch({ type: 'set_loading', payload: false });
             }
         };
 
         fetchAllDrivers();
     }, [yearSeason])
 
+    useEffect(()=>{
+        const fetchDriver = async () => {
+            if(!selectDriver || !yearSeason) return;
+
+            try{
+                const response = await fetch(`https://ergast.com/api/f1/${yearSeason}/drivers/${selectDriver}.json`);
+                if (!response.ok) {
+                    throw new Error(`Erro API F1: ${response.status}`);
+                }
+                const data = await response.json();
+                dispatch({
+                    type: 'set_driver_data',
+                    payload: data.MRData.DriverTable.Drivers[0] || null
+                })
+            }catch (error){
+                toast.error("Erro ao procurar dados do piloto.");
+                console.error('Error to find data of the driver', error);
+            }
+        };
+
+        if(selectDriver) fetchDriver();
+    }, [selectDriver, yearSeason])
+
     return (
-        <DriverContext.Provider value={{ driverData, driversData, setSelectDriver: (driverId) =>
+        <DriverContext.Provider value={{ driverData, driversData, isLoading, setSelectDriver: (driverId) =>
             dispatch({ type: 'set_select_driver', payload: driverId }) }} >
-            {table}
-            {selectDriver !== "" && driver}
+            {tableComponent}
+            {selectDriver && driverComponent}
         </DriverContext.Provider>
     )
 };
