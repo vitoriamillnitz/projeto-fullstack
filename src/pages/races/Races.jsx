@@ -1,9 +1,9 @@
 import React from 'react'
 import './Races.css'
-import CardRace from '../cardRace/CardRace'
+import CardRace from '../../components/cardRace/CardRace'; 
 import { RaceContext } from '../../context/RaceContext'
 import { useContext } from 'react'
-import Loading from '../loading/Loading'
+import Loading from '../../components/LoadingSpinner/Loading'; 
 
 const Races = () => {
   const { racesData } = useContext(RaceContext);

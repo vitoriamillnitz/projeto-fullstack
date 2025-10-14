@@ -8,7 +8,7 @@ import DriverProvider from './context/DriverContext';
 import TeamProvider from './context/TeamContext';
 import RaceProvider from './context/RaceContext';
 
-import Menu from './components/menu/Header'; 
+import Menu from './components/menu/Menu';  
 import Driver from './components/driver/Driver';
 import Table from './components/table/Table';
 import FormCreateDriver from './components/formCreateDriver/FormCreateDriver';

@@ -4,7 +4,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { useContext } from 'react';
 import { SeasonContext } from '../../context/SeasonContext';
 import { toast } from 'react-toastify';
-import FindYear from '../findYear/FindYear';
+import FindYear from '../FindYear/FindYear';
 import { LoginContext } from '../../context/LoginContext';
 
 const Menu = () => {
