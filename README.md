@@ -1,16 +1,51 @@
-# React + Vite
+# 🏁 F1 Data Tracker - Single Page Application (SPA)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é o desenvolvimento da camada Frontend de uma aplicação web em **React.js e AJAX**, seguindo o conceito de **SPA - Single Page Application**. A aplicação permite que o usuário consulte resultados históricos das temporadas de Fórmula 1, utilizando APIs JSON abertas.
 
-Currently, two official plugins are available:
+Desenvolvido para a disciplina **ES47B-ES71 - Programação Web Fullstack**  - UTFPR Campus Cornélio Procópio.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙️ Tecnologias e Critérios Atendidos
 
-## React Compiler
+O projeto foi construído para atender a todos os critérios da Proposta do Projeto 1, utilizando as seguintes especificações:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Categoria | Especificação | Critério Atendido |
+| :--- | :--- | :--- |
+| **Estrutura** | React.js (Vite) e AJAX (Fetch API) | Desenvolvimento da camada Frontend, Estrutura do projeto. |
+| **API JSON** | `https://api.jolpi.ca//ergast/f1/` (API de Resultados Históricos) | Consumo de API JSON. |
+| **React Hook** | **`useReducer`** | Implementação da funcionalidade/hook selecionado. |
+| **Biblioteca Externa** | **React Router (`react-router-dom`)** | Uso de biblioteca externa para navegação SPA. |
+| **Design/UX** | **Material UI (MUI)** | Atendimento às diretrizes de desenvolvimento web. 
 
-## Expanding the ESLint configuration
+## ✨ Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  **Busca Parametrizada:** Permite a busca por ano da temporada (Ex: `2023`), enviando o parâmetro para a API.
+2.  **Validação de Formulário:** Realiza a verificação de preenchimento obrigatório e formato do ano antes de enviar a requisição.
+3.  **Gestão de Estado:** Utiliza o `useReducer` em conjunto com a Context API para gerenciar o estado da aplicação (Loading, Dados, Erro).
+4.  **Tratamento de Erros:** Apresenta mensagens de erro específicas tanto para a validação local (antes do envio) quanto para falhas de requisição ou API (depois do envio).
+5.  **SPA:** Implementado com React Router para garantir que a navegação entre rotas (`/`, `/sobre`) ocorra sem recarregar a página HTML.
+
+## 🚀 Como Rodar o Projeto Localmente
+
+Certifique-se de ter o Node.js e o npm instalados.
+
+1.  **Clone o Repositório:**
+    ```bash
+    git clone [URL_DO_SEU_REPOSITORIO]
+    cd f1-project
+    ```
+2.  **Instale as Dependências:**
+    ```bash
+    npm install
+    ```
+3.  **Inicie o Servidor de Desenvolvimento (Vite):**
+    ```bash
+    npm run dev
+    ```
+    A aplicação estará acessível em `http://localhost:5174/` (ou outra porta disponível).
+
+## 📦 Deployment (Entrega)
+
+O pacote de *deployment* foi gerado utilizando o comando `npm run build`. A pasta **`dist/`** contém os arquivos estáticos prontos para serem disponibilizados em um servidor web (como Vercel ou Netlify).
+
+---
+*Desenvolvido por [Vitória Millnitz] - UTFPR.*
