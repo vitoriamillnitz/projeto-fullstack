@@ -48,4 +48,4 @@ Certifique-se de ter o Node.js e o npm instalados.
 O pacote de *deployment* foi gerado utilizando o comando `npm run build`. A pasta **`dist/`** contém os arquivos estáticos prontos para serem disponibilizados em um servidor web (como Vercel ou Netlify).
 
 ---
-*Desenvolvido por [Vitória Millnitz] - UTFPR.*
+*Desenvolvido por Vitória Millnitz - UTFPR.*
